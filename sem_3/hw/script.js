@@ -25,15 +25,13 @@ operationDict[_diff] = diff;
 operationDict[_mult] = mult;
 operationDict[_div] = div;
 
-var avalibleOperations = Object.keys(operationDict)
-
 function inputOperation() {
     
-    let operation = prompt(`Введите арифмитическую операцию (${avalibleOperations})`)
+    let operation = prompt(`Введите арифмитическую операцию (${Object.keys(operationDict)})`)
 
     alert(operation)
 
-    if (operation in avalibleOperations) {
+    if (String(operation) in operationDict) {
         return operation
     }
 
