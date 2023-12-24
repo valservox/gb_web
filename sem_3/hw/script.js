@@ -29,8 +29,6 @@ function inputOperation() {
     
     let operation = prompt(`Введите арифмитическую операцию (${Object.keys(operationDict)})`)
 
-    alert(operation)
-
     if (String(operation) in operationDict) {
         return operation
     }
